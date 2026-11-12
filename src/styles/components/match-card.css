@@ -1,0 +1,58 @@
+/* Card de partida usado na seção Jogos */
+
+.es-match-card {
+  min-height: 10.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--es-space-8);
+  padding: 1.15rem 1.7rem 1.25rem;
+  border: var(--es-border);
+  border-radius: var(--es-radius-lg);
+  background: var(--es-color-surface);
+}
+
+.es-match-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--es-space-3);
+}
+
+.es-match-card__sport {
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-lg);
+}
+
+.es-match-card__teams {
+  display: grid;
+  gap: var(--es-space-2);
+}
+
+.es-match-card__team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--es-space-4);
+  font-size: var(--es-font-size-lg);
+}
+
+.es-match-card__team-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.es-match-card__score {
+  flex: 0 0 auto;
+  font-size: var(--es-font-size-xl);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 520px) {
+  .es-match-card {
+    min-height: auto;
+    gap: var(--es-space-6);
+    padding: 1.1rem 1.2rem;
+  }
+}

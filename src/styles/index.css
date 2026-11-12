@@ -1,0 +1,15 @@
+/* Ponto único de entrada: importe este arquivo no HTML. */
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("./components/layout.css");
+@import url("./components/icons.css");
+@import url("./components/navigation.css");
+@import url("./components/buttons.css");
+@import url("./components/forms.css");
+@import url("./components/badges.css");
+@import url("./components/match-card.css");
+@import url("./components/highlights.css");
+@import url("./components/standings.css");
+@import url("./components/tournament-tabs.css");
+@import url("./components/bracket.css");
+@import url("./components/podium.css");

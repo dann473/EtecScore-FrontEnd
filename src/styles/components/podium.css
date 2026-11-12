@@ -1,0 +1,97 @@
+/* Quadro de pódio e ranking final do mata-mata */
+
+.es-ranking-card {
+  padding: 1.2rem 1.35rem 1.4rem;
+  border: var(--es-border);
+  border-radius: var(--es-radius-lg);
+  background: var(--es-color-surface);
+}
+
+.es-podium {
+  min-height: 13rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(0.8rem, 1.8vw, 1.7rem);
+  padding: 0.5rem 0 1rem;
+  border-bottom: var(--es-border-muted);
+}
+
+.es-podium__place {
+  min-width: 4.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--es-space-3);
+  text-align: center;
+}
+
+.es-podium__team {
+  max-width: 8rem;
+  font-size: var(--es-font-size-lg);
+  overflow-wrap: anywhere;
+}
+
+.es-podium__medal {
+  width: clamp(4.2rem, 5vw, 5.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem 0.7rem 0 0;
+  color: var(--es-color-white);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: var(--es-font-weight-bold);
+  line-height: 1;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
+}
+
+.es-podium__place--first .es-podium__medal {
+  height: 7.4rem;
+  background: linear-gradient(180deg, var(--es-color-gold-start), #6D572A 72%, transparent);
+}
+
+.es-podium__place--second .es-podium__medal {
+  height: 5.6rem;
+  background: linear-gradient(180deg, var(--es-color-silver-start), #59616A 72%, transparent);
+}
+
+.es-podium__place--third .es-podium__medal {
+  height: 4.2rem;
+  background: linear-gradient(180deg, var(--es-color-bronze-start), #473B36 72%, transparent);
+}
+
+.es-ranking-table {
+  width: 100%;
+  margin-top: var(--es-space-2);
+  border-collapse: collapse;
+  font-size: var(--es-font-size-base);
+  text-align: left;
+}
+
+.es-ranking-table th {
+  padding: 0.45rem 0 0.55rem;
+  border-bottom: var(--es-border-muted);
+  font-size: var(--es-font-size-sm);
+  font-weight: var(--es-font-weight-regular);
+  text-transform: uppercase;
+}
+
+.es-ranking-table td {
+  padding: 0.28rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.es-ranking-table th:last-child,
+.es-ranking-table td:last-child {
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .es-ranking-card {
+    padding-inline: 0.9rem;
+  }
+
+  .es-podium__team {
+    font-size: var(--es-font-size-sm);
+  }
+}

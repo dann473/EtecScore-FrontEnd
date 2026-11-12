@@ -1,0 +1,47 @@
+/* Badges de status das partidas */
+
+.es-badge {
+  min-width: 6.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.16rem 0.7rem;
+  border: 1px solid currentColor;
+  border-radius: var(--es-radius-pill);
+  background: transparent;
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-xs);
+  font-weight: var(--es-font-weight-medium);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.es-badge--completed {
+  border-color: var(--es-color-success-border);
+  background: var(--es-color-success-bg);
+  color: var(--es-color-success-text);
+}
+
+.es-badge--scheduled {
+  border-color: var(--es-color-info-border);
+  background: var(--es-color-info-bg);
+  color: var(--es-color-info-text);
+}
+
+.es-badge--postponed {
+  border-color: var(--es-color-warning-border);
+  background: var(--es-color-warning-bg);
+  color: var(--es-color-warning-text);
+}
+
+.es-badge--cancelled {
+  border-color: var(--es-color-danger-border);
+  background: var(--es-color-danger-bg);
+  color: var(--es-color-danger-text);
+}
+
+.es-badge--neutral {
+  border-color: var(--es-color-border-muted);
+  background: var(--es-color-surface-soft);
+  color: var(--es-color-text-muted);
+}

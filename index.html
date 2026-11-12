@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/styles/output.css" rel="stylesheet">
+  <link href="./src/styles/index.css" rel="stylesheet">
+  <title>Homepage</title>
+</head>
+<body>
+  <header class="es-header es-container">
+    <a class="es-header__brand" href="#">EtecScore</a>
+    <nav class="es-nav" aria-label="Navegação principal">
+      <a class="es-nav__link" href="#central" aria-current="page">
+        <i data-lucide="house" class="es-icon"></i> Central
+      </a>
+      <span class="es-nav__separator" aria-hidden="true"></span>
+      <a class="es-nav__link" href="#mata-mata">
+        <i data-lucide="trophy" class="es-icon"></i> Mata-mata
+      </a>
+      <span class="es-nav__separator" aria-hidden="true"></span>
+      <a class="es-nav__link" href="#equipes">
+        <i data-lucide="users" class="es-icon"></i> Equipes
+      </a>
+    </nav>
+    <div class="es-header__search">
+      <label class="es-search">
+        <i data-lucide="search" class="es-search__icon"></i>
+        <input class="es-search__input" type="search" placeholder="Pesquisar">
+        <span class="es-search__shortcut">⌘ + K</span>
+      </label>
+    </div>
+  </header>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    // Initialize Lucide icons on the page
+    lucide.createIcons();
+  </script>
+</body>
+</html>

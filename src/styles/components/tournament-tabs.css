@@ -1,0 +1,50 @@
+/* Navegação entre fases do mata-mata */
+
+.es-round-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  min-height: 4.3rem;
+  border: var(--es-border);
+  border-radius: var(--es-radius-lg);
+  overflow: hidden;
+}
+
+.es-round-tabs__item {
+  position: relative;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--es-color-text);
+  font-family: var(--es-font-mono);
+  font-size: clamp(1.1rem, 2vw, 1.85rem);
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color var(--es-transition), background-color var(--es-transition);
+}
+
+.es-round-tabs__item + .es-round-tabs__item::before {
+  position: absolute;
+  top: 22%;
+  bottom: 22%;
+  left: 0;
+  width: 1px;
+  background: var(--es-color-border-muted);
+  content: "";
+}
+
+.es-round-tabs__item:hover,
+.es-round-tabs__item[aria-selected="true"] {
+  color: var(--es-color-accent);
+}
+
+@media (max-width: 620px) {
+  .es-round-tabs__item {
+    padding-inline: 0.35rem;
+    font-size: 0.95rem;
+  }
+}

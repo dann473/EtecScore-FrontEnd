@@ -1,0 +1,136 @@
+/* Chave eliminatória: colunas de rodadas, cartões e conectores.
+   Os conectores são elementos HTML separados para permitir posicionamento dinâmico via JS. */
+
+.es-bracket-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(22rem, 1fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+  margin-top: var(--es-space-6);
+}
+
+.es-bracket-scroll {
+  min-width: 0;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem 1rem;
+  scrollbar-color: var(--es-color-border-muted) transparent;
+}
+
+.es-bracket {
+  position: relative;
+  min-width: 48rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(13rem, 1fr));
+  gap: clamp(2.25rem, 4vw, 4.5rem);
+  align-items: center;
+}
+
+.es-bracket__round {
+  min-height: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.es-bracket__round--two {
+  padding-block: 4rem;
+}
+
+.es-bracket__round--final {
+  justify-content: center;
+}
+
+.es-bracket-match {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid var(--es-color-border);
+  border-radius: var(--es-radius-lg);
+  background: var(--es-color-bg);
+}
+
+.es-bracket-match__team {
+  min-height: 3.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--es-space-3);
+  padding: 0.45rem 0.8rem 0.45rem 1rem;
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-lg);
+}
+
+.es-bracket-match__team + .es-bracket-match__team {
+  border-top: var(--es-border-muted);
+}
+
+.es-bracket-match__team--winner {
+  background: linear-gradient(105deg, var(--es-color-winner-start), var(--es-color-winner-end));
+}
+
+.es-bracket-match__team--gold {
+  background: linear-gradient(105deg, var(--es-color-gold-start), var(--es-color-gold-end));
+}
+
+.es-bracket-match__team--silver {
+  background: linear-gradient(105deg, var(--es-color-silver-start), var(--es-color-silver-end));
+}
+
+.es-bracket-match__name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.es-bracket-match__score {
+  width: 1.95rem;
+  height: 1.95rem;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--es-color-border);
+  border-radius: 0.65rem;
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* Use estes elementos para desenhar as ligações entre partidas. */
+.es-bracket__connector {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  background: var(--es-color-border-muted);
+  pointer-events: none;
+}
+
+.es-bracket__connector--horizontal {
+  width: var(--connector-width, 2rem);
+  height: 1px;
+}
+
+.es-bracket__connector--vertical {
+  width: 1px;
+  height: var(--connector-height, 4rem);
+}
+
+.es-bracket__connector--elbow {
+  width: var(--connector-width, 2rem);
+  height: var(--connector-height, 4rem);
+  border-top: 1px solid var(--es-color-border-muted);
+  border-right: 1px solid var(--es-color-border-muted);
+  background: transparent;
+}
+
+@media (max-width: 1050px) {
+  .es-bracket-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .es-bracket__round {
+    min-height: 27rem;
+  }
+}

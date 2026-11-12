@@ -1,0 +1,165 @@
+/* Cards de jogador/equipe em destaque e estatísticas */
+
+.es-spotlight-card {
+  position: relative;
+  min-height: 16rem;
+  overflow: hidden;
+  border: var(--es-border);
+  border-radius: var(--es-radius-lg);
+  background: var(--es-color-surface);
+}
+
+.es-spotlight-card__eyebrow {
+  position: absolute;
+  z-index: 2;
+  top: 0.8rem;
+  left: 50%;
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-sm);
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.es-spotlight-card__content {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  gap: var(--es-space-5);
+  padding: 2.8rem 2rem 1.5rem;
+}
+
+.es-spotlight-card--player .es-spotlight-card__content {
+  padding-left: 34%;
+}
+
+.es-spotlight-card__portrait {
+  position: absolute;
+  bottom: 0;
+  left: 7%;
+  width: 27%;
+  max-height: 92%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.es-spotlight-card__team-logo {
+  width: clamp(5rem, 8vw, 7.2rem);
+  height: clamp(5rem, 8vw, 7.2rem);
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.es-spotlight-card__details {
+  min-width: 0;
+  display: grid;
+  justify-items: start;
+  gap: var(--es-space-4);
+}
+
+.es-spotlight-card__name {
+  max-width: 12ch;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: var(--es-font-weight-semibold);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  overflow-wrap: anywhere;
+}
+
+.es-spotlight-card__number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 4.7rem;
+  padding: 0.8rem 0.65rem;
+  border-left: var(--es-border);
+  border-bottom: var(--es-border);
+  border-bottom-left-radius: var(--es-radius-lg);
+  background: var(--es-color-bg);
+  font-size: 2.55rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  text-align: center;
+}
+
+.es-spotlight-stats {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(4rem, 1fr);
+  align-items: center;
+  border: var(--es-border);
+  border-radius: var(--es-radius-md);
+  padding: 0.65rem 0.8rem;
+}
+
+.es-spotlight-stats__item {
+  min-width: 4rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.05rem;
+  padding-inline: 0.55rem;
+  text-align: center;
+}
+
+.es-spotlight-stats__item + .es-spotlight-stats__item {
+  border-left: var(--es-border-muted);
+}
+
+.es-spotlight-stats__value {
+  font-size: 1.65rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.es-spotlight-stats__label {
+  font-size: var(--es-font-size-xs);
+  line-height: 1.1;
+}
+
+.es-spotlight-card__arrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--es-color-text-muted);
+  transform: translateY(-50%);
+}
+
+.es-spotlight-card__arrow:hover {
+  color: var(--es-color-accent);
+}
+
+.es-spotlight-card__arrow--prev { left: 0.35rem; }
+.es-spotlight-card__arrow--next { right: 0.35rem; }
+
+@media (max-width: 700px) {
+  .es-spotlight-card__content {
+    padding-inline: 1.4rem;
+  }
+
+  .es-spotlight-card--player .es-spotlight-card__content {
+    padding-left: 34%;
+  }
+
+  .es-spotlight-card__name {
+    font-size: 1.45rem;
+  }
+
+  .es-spotlight-stats {
+    grid-auto-columns: minmax(3.4rem, 1fr);
+    padding-inline: 0.35rem;
+  }
+
+  .es-spotlight-stats__item {
+    min-width: 3.4rem;
+    padding-inline: 0.35rem;
+  }
+}

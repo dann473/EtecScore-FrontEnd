@@ -1,0 +1,47 @@
+/* Tabela de classificação */
+
+.es-standings {
+  min-height: 16rem;
+  padding: 1rem 1.05rem;
+  border: var(--es-border);
+  border-radius: var(--es-radius-lg);
+  background: var(--es-color-surface);
+}
+
+.es-standings__table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-base);
+  text-align: left;
+}
+
+.es-standings__table thead th {
+  padding: 0.15rem 0 0.8rem;
+  border-bottom: var(--es-border-muted);
+  font-size: var(--es-font-size-sm);
+  font-weight: var(--es-font-weight-regular);
+  text-transform: uppercase;
+}
+
+.es-standings__table tbody td {
+  padding: 0.55rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.es-standings__table th:last-child,
+.es-standings__table td:last-child {
+  text-align: right;
+}
+
+.es-standings__position {
+  width: 2rem;
+}
+
+.es-standings__team {
+  padding-inline: 0.55rem;
+}
+
+.es-standings__points {
+  width: 3rem;
+}

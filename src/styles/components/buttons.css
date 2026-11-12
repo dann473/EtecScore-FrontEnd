@@ -1,0 +1,81 @@
+/* Botões primário, secundário e versões apenas com ícone */
+
+.es-btn {
+  min-height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--es-space-3);
+  padding: 0.75rem 1.4rem;
+  border: var(--es-border);
+  border-radius: var(--es-radius-pill);
+  background: transparent;
+  color: var(--es-color-text);
+  font-size: var(--es-font-size-lg);
+  font-weight: var(--es-font-weight-regular);
+  line-height: 1;
+  transition: color var(--es-transition), background-color var(--es-transition), border-color var(--es-transition), transform var(--es-transition);
+}
+
+.es-btn:hover {
+  border-color: var(--es-color-accent);
+  color: var(--es-color-accent);
+}
+
+.es-btn:active {
+  transform: translateY(1px);
+}
+
+.es-btn--primary {
+  border-color: var(--es-color-border);
+  background: transparent;
+  color: var(--es-color-text);
+}
+
+.es-btn--primary:hover {
+  background: rgb(128 162 218 / 0.08);
+}
+
+.es-btn--secondary {
+  border-color: var(--es-color-text);
+  background: var(--es-color-text);
+  color: var(--es-color-on-light);
+}
+
+.es-btn--secondary:hover {
+  border-color: var(--es-color-accent);
+  background: var(--es-color-accent);
+  color: var(--es-color-on-light);
+}
+
+.es-btn--icon {
+  width: 3.25rem;
+  min-width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  border-radius: 1.2rem;
+}
+
+.es-btn--icon.es-btn--circle {
+  border-radius: 50%;
+}
+
+.es-btn--sm {
+  min-height: 2.5rem;
+  padding: 0.55rem 1rem;
+  font-size: var(--es-font-size-sm);
+}
+
+.es-btn--block {
+  width: 100%;
+}
+
+.es-btn__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 auto;
+}
+
+.es-btn--secondary .es-btn__icon {
+  color: var(--es-color-on-light);
+}
